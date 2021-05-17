@@ -1,0 +1,63 @@
+:root {
+	--text-blue: hsl(238, 29%, 16%);
+	--text-dkblue: hsl(240, 6%, 50%);
+	--text-xdblue: hsl(237, 12%, 33%);
+	--text-red: hsl(14, 88%, 65%);
+	--gradient-violet: hsl(273, 75%, 66%);
+	--gradient-blue: hsl(240, 73%, 65%);
+	--divider-blue: hsl(240, 5%, 91%);
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 3rem;
+	font-family: 'Kumbh Sans', sans-serif;
+	background-image: linear-gradient(
+		var(--gradient-violet),
+		var(--gradient-blue)
+	);
+}
+
+.card {
+	background-color: #ffffff;
+	border-radius: 2rem;
+	max-width: 56rem;
+}
+
+.card__image img {
+	width: 100%;
+	height: auto;
+	max-width: 25rem;
+}
+
+.card__text {
+}
+
+@media (min-width: 56em) {
+	.card {
+		display: flex;
+		margin: 6rem auto;
+		padding-right: 2rem;
+		background-image: url(/images/bg-pattern-desktop.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+
+	.card__image,
+	.card__text {
+		flex: 1;
+	}
+}
