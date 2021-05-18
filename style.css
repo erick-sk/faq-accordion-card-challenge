@@ -41,6 +41,7 @@ h3 {
 	background-color: #ffffff;
 	border-radius: 2rem;
 	max-width: 56rem;
+	padding: 2.875rem 1.5rem;
 	background-image: url(/images/bg-pattern-mobile.svg);
 	background-repeat: no-repeat;
 	background-position: center 0%;
@@ -62,9 +63,8 @@ h3 {
 	transform: translateX(-50%);
 	display: block;
 	width: 100%;
-	height: auto;
 	max-width: 15rem;
-	margin: auto;
+	height: auto;
 }
 
 .card__text {
@@ -72,6 +72,7 @@ h3 {
 }
 
 .accordion__item {
+	padding-top: 1rem;
 	border-bottom: 1px solid var(--divider-blue);
 }
 
@@ -80,20 +81,39 @@ h3 {
 }
 
 .accordion__question {
-	display: block;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
 	border: none;
 	background-color: transparent;
 	margin-bottom: 1rem;
-	padding: 0;
+	padding: 0.2rem;
 	font-size: 0.875rem;
 	font-family: 'Kumbh Sans', sans-serif;
 	text-align: left;
 }
 
+.accordion__question.open {
+	font-weight: 700;
+}
+
+.accordion__question::after {
+	content: '';
+	display: block;
+	width: 0.625rem;
+	height: 1rem;
+	border: none;
+	background-image: url('/images/icon-arrow-down.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
 .accordion__content {
 	font-size: 0.75rem;
 	line-height: 1.4;
+	padding-bottom: 1rem;
 }
 
 @media (min-width: 56em) {
@@ -105,7 +125,7 @@ h3 {
 		position: relative;
 		display: flex;
 		margin: 0 auto;
-		padding-right: 2rem;
+		padding: 4.375rem 6.25rem 4.375rem 0;
 		background-image: url(/images/bg-pattern-desktop.svg);
 		background-size: 45%;
 		background-position: -13% center;
