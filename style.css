@@ -130,17 +130,20 @@ h3 {
     line-height: 1.4;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem;
 }
 
 .accordion__collapse.collapse {
     display: none;
 }
 
-.accordion__collapsing {
+.accordion__collapse.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 300ms ease;
 }
 
 .accordion__collapse.open {
+    display: block;
 }
 
 /* DESKTOP STYLES */
