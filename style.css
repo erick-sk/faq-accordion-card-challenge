@@ -94,6 +94,10 @@ h3 {
     text-align: left;
 }
 
+.accordion__question:focus {
+    outline-color: red;
+}
+
 .accordion__question.open {
     font-weight: 700;
 }
@@ -108,6 +112,15 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
+    transition: transform 300ms ease-in-out;
+}
+
+.accordion__question.open {
+    font-weight: 700;
+}
+
+.accordion__question.open::after {
+    transform: rotate(180deg);
 }
 
 .accordion__content {
@@ -118,6 +131,12 @@ h3 {
 
 .accordion__collapse.collapse {
     display: none;
+}
+
+.accordion__collapsing {
+}
+
+.accordion__collapse.open {
 }
 
 /* DESKTOP STYLES */
