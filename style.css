@@ -129,7 +129,10 @@ h3 {
     font-size: 0.75rem;
     line-height: 1.4;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
+}
+
+.accordion__collapse {
+    transition: height 300ms ease;
 }
 
 .accordion__collapse.collapse {
@@ -139,7 +142,6 @@ h3 {
 .accordion__collapse.collapsing {
     height: 0;
     overflow: hidden;
-    transition: height 300ms ease;
 }
 
 .accordion__collapse.open {
